@@ -96,6 +96,8 @@ python train_model.py
 ├── requirements.txt            # Python dependencies
 └── README.md                   # Project documentation
 
+---
+
 ## **Results**
 - The model achieved **87% accuracy** after feature selection, highlighting significant predictors such as:
   - **Number of major vessels (ca)**
