@@ -82,19 +82,22 @@ python train_model.py
 ---
 
 ## *Directory Structure**
-├── data
-│   ├── raw_data.csv            # Raw dataset
-│   ├── cleaned_data.csv        # Preprocessed dataset
-├── notebooks
-│   ├── EDA.ipynb               # Exploratory Data Analysis
-│   ├── causal_analysis.ipynb   # Causal Inference Workflow
-│   ├── modeling.ipynb          # Model Training and Evaluation
-├── src
-│   ├── preprocess_data.py      # Data cleaning and preprocessing
-│   ├── analyze_data.py         # EDA and visualization
-│   ├── train_model.py          # Model training and evaluation
-├── requirements.txt            # Python dependencies
-└── README.md                   # Project documentation
+## **Directory Structure**
+
+- **data**
+  - `raw_data.csv`: Raw dataset
+  - `cleaned_data.csv`: Preprocessed dataset
+- **notebooks**
+  - `EDA.ipynb`: Exploratory Data Analysis
+  - `causal_analysis.ipynb`: Causal Inference Workflow
+  - `modeling.ipynb`: Model Training and Evaluation
+- **src**
+  - `preprocess_data.py`: Data cleaning and preprocessing
+  - `analyze_data.py`: EDA and visualization
+  - `train_model.py`: Model training and evaluation
+- `requirements.txt`: Python dependencies
+- `README.md`: Project documentation
+
 
 ---
 
