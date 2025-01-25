@@ -72,10 +72,13 @@ This repository explores the intricate relationships between clinical, demograph
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/causality-cardiovascular-health.git
-## **Install required libraries**
-2.pip install -r requirements.txt
-## **Run the preprocessing and analysis scripts**
-3.python preprocess_data.py
+
+2. ## **Install required libraries**
+ ```bash
+pip install -r requirements.txt
+3. **Run the preprocessing and analysis scripts**
+ ```bash
+python preprocess_data.py
 python analyze_data.py
 python train_model.py
 
