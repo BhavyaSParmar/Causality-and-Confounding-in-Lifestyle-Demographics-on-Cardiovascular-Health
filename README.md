@@ -1,71 +1,123 @@
-# Causality and Confounding in Lifestyle and Demographics on Cardiovascular Health
+# **Causality and Confounding in Lifestyle and Demographics on Cardiovascular Health**
 
-This project is a comprehensive exploration of cardiovascular health, leveraging **causal inference techniques** and **machine learning models** to understand the intricate relationships between clinical, demographic, and lifestyle factors and their impact on heart disease outcomes.
-
----
-
-## Project Overview
-
-The aim of the study is to:
-- **Identify key predictors of heart disease** using data-driven approaches.
-- **Understand the role of confounding variables** such as age, gender, and chest pain type that may distort causal relationships.
-- **Develop robust predictive models** to support precision medicine and public health strategies.
+This repository explores the intricate relationships between clinical, demographic, and lifestyle factors and their influence on cardiovascular health. Using **causal inference techniques** and **machine learning models**, the project aims to derive actionable insights to support precision medicine and public health strategies.
 
 ---
 
-## Key Highlights
-
-### **1. Data Preprocessing**
-- Handled missing data by normalizing and standardizing numerical variables.
-- Encoded categorical variables, such as gender and chest pain type, to make them suitable for analysis.
-- Conducted a thorough cleaning process to ensure high-quality data for modeling.
-
-### **2. Exploratory Data Analysis (EDA)**
-- Conducted **correlation and pairwise analyses** to understand the relationships between features.
-- Used visualizations like **heatmaps** and **scatter plots** to identify trends and patterns in the data.
-- Analyzed categorical variables against the target (presence or absence of heart disease) to highlight significant associations.
-
-### **3. Causal Inference**
-- Applied **propensity score matching** to control for confounding variables like age and chest pain type.
-  - This technique ensured that comparisons between groups (with and without heart disease) were fair and unbiased.
-- Created matched datasets using **Nearest Neighbors**, allowing for clearer causal insights.
-- Conducted **sensitivity analysis** to confirm the robustness of the findings.
-
-### **4. Machine Learning Modeling**
-- Trained a **Random Forest Classifier** to predict the presence of heart disease, achieving:
-  - **85% accuracy** with the full feature set.
-  - Improved **87% accuracy** using a refined subset of features.
-- Extracted **feature importance scores**, identifying:
-  - **Number of major vessels (`ca`)** as the most significant predictor.
-  - Other important predictors like **maximum heart rate (`thalach`)** and **ST depression (`oldpeak`).
-
-### **5. Feature Selection**
-- Simplified the model by focusing on **clinically relevant features**, improving its performance and interpretability.
-- Demonstrated how reducing noise in the data can enhance predictive power and generalization.
+## **Project Objectives**
+- Identify key determinants of cardiovascular health using **data-driven approaches**.
+- Address the effects of confounding variables (e.g., age, gender, chest pain type) to ensure unbiased causal relationships.
+- Develop robust machine learning models for predicting cardiovascular outcomes.
 
 ---
 
-## Key Insights
+## **Project Workflow**
 
-1. **Lifestyle and Clinical Predictors**:
-   - Maximum heart rate, chest pain type, and ST depression were strongly associated with heart disease risk.
-2. **Demographic Confounders**:
-   - Age and gender showed a strong influence on outcomes and were controlled using causal inference techniques.
-3. **Model Performance**:
-   - The Random Forest model demonstrated high precision and recall for both classes, making it a robust tool for cardiovascular risk prediction.
+### 1. **Data Preprocessing**
+- Handled missing data using imputation and normalized numerical variables to ensure uniformity.
+- Encoded categorical features (e.g., gender, chest pain type) with techniques like **one-hot encoding**.
+- Cleaned and validated datasets to minimize noise and inconsistencies.
+
+### 2. **Exploratory Data Analysis (EDA)**
+- Performed **pairwise correlation** and dependency analysis to identify feature relationships.
+- Visualized trends and patterns with **heatmaps**, **scatter plots**, and **distribution plots**.
+- Conducted hypothesis testing on categorical variables to determine their significance relative to heart disease outcomes.
+
+### 3. **Causal Inference**
+- Applied **propensity score matching (PSM)** to control for confounders such as age and chest pain type.
+- Used **Nearest Neighbors Matching** to create balanced datasets for robust causal analysis.
+- Performed sensitivity analysis to validate the stability of causal inferences under various assumptions.
+
+### 4. **Machine Learning Modeling**
+- Built and trained a **Random Forest Classifier** to predict heart disease presence:
+  - Achieved **85% accuracy** with the full feature set.
+  - Improved to **87% accuracy** using feature-optimized subsets.
+- Extracted feature importance metrics, identifying:
+  - **Number of major vessels (ca)** as the most significant predictor.
+  - Other key predictors: **maximum heart rate (thalach)** and **ST depression (oldpeak)**.
+
+### 5. **Feature Selection**
+- Streamlined the model by focusing on clinically relevant features to improve interpretability.
+- Applied **Recursive Feature Elimination (RFE)** to reduce dimensionality and enhance model performance.
 
 ---
 
-## Technologies and Tools
+## **Key Insights**
+### **1. Lifestyle and Clinical Predictors**
+- Strong associations were found between **maximum heart rate**, **chest pain type**, and **ST depression** with cardiovascular health.
 
-- **Programming Language**: Python  
-- **Libraries Used**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  
-- **Machine Learning Models**: Random Forest Classifier  
-- **Causal Inference Methods**: Propensity Score Matching, Nearest Neighbors Matching  
-- **Visualization**: Heatmaps, Pairwise Plots, Feature Importance Graphs  
+### **2. Demographic Confounders**
+- Variables such as **age** and **gender** significantly influenced outcomes and were controlled using causal inference techniques.
+
+### **3. Model Performance**
+- The **Random Forest Classifier** demonstrated high precision, recall, and overall robustness, making it an effective tool for cardiovascular risk prediction.
 
 ---
 
-## Conclusion
+## **Technologies and Tools**
+- **Programming Language:** Python
+- **Libraries:**
+  - **Data Processing:** Pandas, NumPy
+  - **Visualization:** Matplotlib, Seaborn
+  - **Machine Learning:** Scikit-learn
+- **Techniques:**
+  - **Machine Learning:** Random Forest Classifier
+  - **Causal Inference:** Propensity Score Matching, Nearest Neighbors Matching
+  - **Feature Engineering:** Recursive Feature Elimination (RFE)
+- **Visualizations:** Heatmaps, Pairwise Plots, Feature Importance Graphs
 
-This project highlights the critical role of **data-driven methodologies** in understanding cardiovascular health. By combining causal inference and machine learning, it provides actionable insights into the factors influencing heart disease and demonstrates how addressing confounders can improve predictive accuracy. The findings underscore the importance of precision in data analysis for developing effective interventions and public health policies.
+---
+
+## **How to Run the Project**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/causality-cardiovascular-health.git
+## **Install required libraries**
+2.pip install -r requirements.txt
+## **Run the preprocessing and analysis scripts**
+3.python preprocess_data.py
+python analyze_data.py
+python train_model.py
+
+---
+
+## *Directory Structure**
+├── data
+│   ├── raw_data.csv            # Raw dataset
+│   ├── cleaned_data.csv        # Preprocessed dataset
+├── notebooks
+│   ├── EDA.ipynb               # Exploratory Data Analysis
+│   ├── causal_analysis.ipynb   # Causal Inference Workflow
+│   ├── modeling.ipynb          # Model Training and Evaluation
+├── src
+│   ├── preprocess_data.py      # Data cleaning and preprocessing
+│   ├── analyze_data.py         # EDA and visualization
+│   ├── train_model.py          # Model training and evaluation
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project documentation
+
+## **Results**
+- The model achieved **87% accuracy** after feature selection, highlighting significant predictors such as:
+  - **Number of major vessels (ca)**
+  - **Maximum heart rate (thalach)**
+  - **ST depression (oldpeak)**
+- Addressing confounders like **age** and **gender** significantly enhanced the robustness of causal insights and minimized biases.
+
+---
+
+## **Contributing**
+Contributions are welcome! If you would like to improve the project or add new features, please:
+1. Fork the repository.
+2. Create a new branch for your feature or improvement.
+3. Submit a pull request, providing a clear description of your changes.
+
+---
+
+## **License**
+This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
+
+---
+
+## **Acknowledgments**
+- Special thanks to the creators of the datasets used in this analysis.
+- Gratitude to the open-source community for developing the libraries and tools that made this project possible.
