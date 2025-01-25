@@ -69,62 +69,42 @@ This repository explores the intricate relationships between clinical, demograph
 ---
 
 ## **How to Run the Project**
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/your-username/causality-cardiovascular-health.git
+2. **Install required libraries:**
+    ```bash
+    pip install -r requirements.txt
 
-2. ## **Install required libraries**
- ```bash
-pip install -r requirements.txt
-3. **Run the preprocessing and analysis scripts**
- ```bash
-python preprocess_data.py
-python analyze_data.py
-python train_model.py
+3. **Run the preprocessing and analysis scripts:**
+   ```bash
+   python preprocess_data.py
+   python analyze_data.py
+   python train_model.py
 
----
+ ---
 
-## **Directory Structure**
+## **Results:**
+The model achieved 87% accuracy after feature selection, highlighting significant predictors such as:
+Number of major vessels (ca)
+Maximum heart rate (thalach)
+ST depression (oldpeak)
+Addressing confounders like age and gender significantly enhanced the robustness of causal insights and minimized biases.
 
-- **data**
-  - `raw_data.csv`: Raw dataset
-  - `cleaned_data.csv`: Preprocessed dataset
-- **notebooks**
-  - `EDA.ipynb`: Exploratory Data Analysis
-  - `causal_analysis.ipynb`: Causal Inference Workflow
-  - `modeling.ipynb`: Model Training and Evaluation
-- **src**
-  - `preprocess_data.py`: Data cleaning and preprocessing
-  - `analyze_data.py`: EDA and visualization
-  - `train_model.py`: Model training and evaluation
-- `requirements.txt`: Python dependencies
-- `README.md`: Project documentation
+--- 
 
-
----
-
-## **Results**
-- The model achieved **87% accuracy** after feature selection, highlighting significant predictors such as:
-  - **Number of major vessels (ca)**
-  - **Maximum heart rate (thalach)**
-  - **ST depression (oldpeak)**
-- Addressing confounders like **age** and **gender** significantly enhanced the robustness of causal insights and minimized biases.
-
----
-
-## **Contributing**
+## **Contribution:**
 Contributions are welcome! If you would like to improve the project or add new features, please:
-1. Fork the repository.
+1. Fork the repository
 2. Create a new branch for your feature or improvement.
 3. Submit a pull request, providing a clear description of your changes.
 
----
+--- 
 
-## **License**
-This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
+## **License:**
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
----
-
-## **Acknowledgments**
-- Special thanks to the creators of the datasets used in this analysis.
-- Gratitude to the open-source community for developing the libraries and tools that made this project possible.
+--- 
+## **Acknowledgments:**
+Special thanks to the creators of the datasets used in this analysis.
+Gratitude to the open-source community for developing the libraries and tools that made this project possible.
