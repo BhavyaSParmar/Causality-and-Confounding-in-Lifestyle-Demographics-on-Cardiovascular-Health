@@ -81,7 +81,6 @@ python train_model.py
 
 ---
 
-## *Directory Structure**
 ## **Directory Structure**
 
 - **data**
